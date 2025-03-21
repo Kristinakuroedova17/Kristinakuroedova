@@ -1,0 +1,120 @@
+* {
+     box-sizing: border-box;
+}
+
+body {
+     background: #1c1e22;
+     color: #fff;
+}
+.support-warning {
+     background: #ccb11c;
+     color: #000;
+     display: block;
+     font-family: 'Raleway', sans-serif;
+     font-weight: 700;
+     opacity: 0.95;
+     padding: 3rem;
+     position: fixed;
+     text-align: center;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: 5;
+}
+
+.support-warning a {
+     color: inherit;
+}
+.l-grid {
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.l-grid > .l-grid__item {
+     flex: 1 0 auto;
+}
+
+.l-grid--4x4 > .l-grid__item {
+     width: 25%;
+}
+
+@supports(display: grid) {
+     .support-warning {
+          display: none;
+     }
+   .l-grid--4x4 > .l-grid__item {
+         width: auto;
+     }
+     
+     .l-grid {
+          display: grid;
+     }
+}
+.l-grid--4x4 {
+     grid-template-columns: repeat(4, 1fr);
+     grid-template-rows: repeat(3, minmax(13rem, 1fr));
+}
+
+.l-span-column-2 {
+     grid-column-start: span 2;
+}
+
+.l-span-row-2 {
+     grid-row-start: span 2;
+}
+
+.l-full-height {
+     min-height: 100vh;
+}
+
+.align-center {
+     align-items: center;
+     justify-content: center;
+}
+
+.content {
+     padding: 3.5rem;
+     max-width: 400px;
+}
+.heading {
+     font-family: 'Times New Roman', serif;
+     font-size: 1.5rem;
+     font-weight: 700;
+     line-height: 1.2;
+     margin-bottom: 1rem;
+}
+
+.description {
+     font-family: 'Times New Roman', sans-serif;
+     font-size: 1rem;
+     line-height: 1.5;
+}
+.theme-Salmon { 
+background: #FA8072; 
+color: #ffffff; } 
+.theme-DarkSalmon { 
+background: #E9967A; 
+color: #ffffff; } 
+.theme-LightCoral { 
+background: #F08080; 
+color: #ffffff; } 
+.img-background {
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center center;
+     color: #fff;
+}
+.img-background--sea {
+     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://github.com/Kristinakuroedova17/Kristinakuroedova/blob/main/sea.jpg');
+}
+
+.img-background--wave {
+     background-image: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://github.com/Kristinakuroedova17/Kristinakuroedova/blob/main/wave.jpg');
+}
+
+.img-background--horizon {
+     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://github.com/Kristinakuroedova17/Kristinakuroedova/blob/main/horizon.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     color: #fff;
+}
