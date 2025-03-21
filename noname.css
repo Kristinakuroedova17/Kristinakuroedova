@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #1c1e22;
+    color: #fff;
+}
+
+.support-warning {
+    background: #ccb11c;
+    color: #000;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    opacity: 0.95;
+    padding: 3rem;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+}
+
+.support-warning a {
+    color: inherit; /* Это сохраняет наследование цвета текста для ссылок */
+}
+
+.l-grid {
+    display: flex; /* Изменение на grid выше по коду */
+    flex-wrap: wrap; /* Можно оставить для поддержки старых браузеров */
+}
+
+.l-grid > .l-grid__item {
+    flex-basis: auto; /* Используйте flex-basis вместо flex: для большей читабельности */
+}
+
+/* Для четырехколоночной сетки */
+.l-grid--4x4 > .l-grid__item {
+    width: 25%; /* Для флекса это нормально, для грида изменится ниже */
+}
+
+/* Поддержка гридов */
+@supports(display:grid) {
+   .support-warning {
+        display:none; /* Скрывает элемент при поддержке grid */
+   }
+
+   .l-grid--4x4 > .l-grid__item {
+       width:auto; 
+   }
+   
+   .l-grid { 
+       display:grid; 
+       grid-template-columns: repeat(4, 1fr); 
+       grid-template-rows: repeat(3, minmax(13rem, 1fr)); 
+   }
+}
+
+.l-span-column-2 {
+     grid-column-end: span 2; /* Правильное окончание задает колонки правильно */
+}
+
+.l-span-row-2 {
+     grid-row-end: span 2; /* Правильное завершение строки задает строки правильно */
+}
+
+.l-full-height {
+     min-height: 100vh; 
+}
+
+.align-center { 
+     display:flex; /* Теперь обязательно используйте display:flex для правильного выравнивания */  
+     align-items:center; 
+     justify-content:center; 
+}
+
+.content { 
+     padding:3.5rem; 
+     max-width:400px; 
+ }
+
+.heading { 
+     font-family:'Times New Roman', serif;  
+     font-size:1.5rem;  
+     font-weight:bold;   
+     line-height:none; /* Исправлено соответственно */  
+     margin-bottom:.5rem;} 
+
+.description {    
+      font-family:'Times New Roman', sans-serif;}    
+
+.theme-Salmon { background:#FA8072;color:#ffffff;}
+.theme-DarkSalmon { background:#E9967A;color:#ffffff;}
+.theme-LightCoral { background:#F08080;color:#ffffff;}
+
+.img-background {    
+      background-size:center center;background-repeat:no-repeat;background-position:center center;color:white;} 
+
+.img-background--sea {    
+      background-image:url('https://raw.githubusercontent.com/Kristinakuroedova17/Kristinakuroedova/main/sea.jpg');} 
+
+.img-background--wave {    
+      background-image:url('https://raw.githubusercontent.com/Kristinakuroedova17/Kristinakuroedova/main/wave.jpg');} 
+
+.img-background--horizon {    
+      background-image:url('https://raw.githubusercontent.com/Kristinakuroedova17/Kristinakuroedova/main/horizon.jpg');}
