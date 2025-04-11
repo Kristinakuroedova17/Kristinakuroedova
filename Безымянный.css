@@ -1,0 +1,102 @@
+.card-container {
+    perspective: 1000px;
+}
+
+.card-container.hover .card {
+    transform: rotateY(180deg);
+}
+
+.card {
+    transform-style: preserve-3d;
+    border-radius: 4px;
+    transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    background: #fff;
+    max-width: 412px;
+    margin: 0 auto;
+}
+
+.card .cover {
+    border-radius: 4px 4px 0 0;
+    height: 320px;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.card img {
+    width: 100%;
+    height: 320px; /* Высота совпадает с указанной */
+}
+
+.card .content {
+    background-color: transparent;
+    padding: 10px 20px 20px;
+}
+
+.card .content .main {
+    min-height: 140px;
+}
+
+.card .name {
+    font-size: 32px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: -180px;
+    font-weight: 300;
+    line-height: 20px;
+}
+
+.card .footer {
+    margin-top: -80px;
+    text-align: center;
+}
+
+.card .footer .btn-simple {
+    margin-top: -6px;
+}
+
+.back .btn-simple {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+}
+
+.card .header {
+    padding: 55px 20px;
+    background: linear-gradient(to top, #FF9314, #FF69B4, #FFC0CB);
+    color: black;
+    font-size: 11pt;
+}
+
+.card .back .content .main {
+    height: 165px; 
+}
+
+/* Фронтальная часть */
+.front,
+/* Обратная сторона */
+.back {
+   backface-visibility: hidden; 
+   transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   transform-style: preserve-3d; 
+   box-shadow: 0 1px 3px rgba(0,0,0,.14); 
+   border-radius: 4px; 
+   position:absolute; 
+   background-color:#fff; 
+   width:100%; 
+   height:320px; 
+   top:0; 
+   left:0; 
+}
+
+/* Фронтальная часть */
+.front { 
+   transform : rotateY(0deg); 
+}
+
+/* Обратная сторона */
+.back { 
+   transform : rotateY(180deg); 
+}
