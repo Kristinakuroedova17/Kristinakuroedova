@@ -1,0 +1,99 @@
+body {
+    background-color: transparent; 
+    margin: 0 auto; 
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 100%; 
+    text-align: center; 
+}
+
+nav {
+    margin: 0 auto;
+    margin-top: 3em;
+    width: 1083px;
+}
+
+nav ul {
+    text-align: left;
+    display: inline;
+    margin: 0;
+    padding: 1em 1em 1em 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: .01em;
+    position: relative;
+    padding: 1em 3em;
+    background: blue; 
+    transition: all 0.2s;
+}
+
+nav li a {
+    padding-bottom: 1em;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 21px;
+    font-weight: bold;
+    font-family: Consolas, monaco, monospace;
+    color: white; 
+}
+
+nav ul li:hover {
+    background-color: skyblue;
+}
+
+nav ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 16em;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+nav ul li ul li { 
+    background-color: skyblue;
+    display: block; 
+    color: #ffffff;
+}
+
+nav ul li ul li:hover { 
+   background-color: steelblue; 
+}
+
+nav ul li:hover ul {
+   display: block; 
+   opacity: 1; 
+   visibility: visible; 
+}
+
+#frameset {
+   overflow: hidden; 
+}
+
+.right {
+   float:left; 
+   width:49%; 
+   height: 300px; 
+   background:steelblue; 
+}
+
+.left {
+   float:left; 
+   width:50%; 
+   height: 300px; 
+   background:black; /* Измените цвет на свой */
+}
+
+footer {
+   background-color: grey; 
+   color:white; 
+   padding :10px; /* Отступ */
+}
